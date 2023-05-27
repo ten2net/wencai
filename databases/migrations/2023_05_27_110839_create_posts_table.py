@@ -10,7 +10,12 @@ class CreatePostsTable(Migration):
         """
         with self.schema.create("posts") as table:
             table.increments("id")
+            table.string('title')
 
+            table.integer('author_id').unsigned()
+            table.foreign('author_id').references('id').on('users')
+
+            table.string('body')
             table.timestamps()
 
     def down(self):
