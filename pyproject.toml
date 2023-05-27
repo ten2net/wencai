@@ -9,3 +9,23 @@ minversion = "6.0"
 testpaths = [
   "tests",
 ]
+[tool.poetry]
+name = "wencai"
+version = "0.1.0"
+description = ""
+authors = ["ten2net <ten2net@163.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+#设置poetry包管理工具的自定义pypi镜像源配置
+[[tool.poetry.source]]
+name = "aliyun"
+url = "http://mirrors.aliyun.com/pypi/simple"
+default = true
